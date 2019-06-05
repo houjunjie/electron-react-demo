@@ -6,7 +6,7 @@ const debugeLessLoader = () => config => {
   const loaders = config.module.rules.find(rule => Array.isArray(rule.oneOf)).oneOf;
   // 修改less-loader 对 css-modules的配置
   loaders[loaders.length - 3].use[1].options.modules = true;
-  loaders[loaders.length - 3].use[1].options.localIdentName = '[local]--[hash:base64:5]';
+  loaders[loaders.length - 3].use[1].options.localIdentName = '[local]';
   return config;
 }
 module.exports = override(
@@ -21,6 +21,9 @@ module.exports = override(
   addLessLoader({
     javascriptEnabled: true,
     modifyVars: {},
+    // strictMath: true,
+    // localIdentName: '[local]--[hash:base64:5]',
+    // noIeCompat: true,
   }),
   debugeLessLoader(),
 );

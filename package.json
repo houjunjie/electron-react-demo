@@ -41,10 +41,14 @@
     ]
   },
   "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.0.17",
+    "@ffprobe-installer/ffprobe": "^1.0.11",
     "@rematch/core": "^1.1.0",
     "@rematch/loading": "^1.1.3",
     "antd": "^3.19.0",
     "electron-is-dev": "^1.1.0",
+    "ffmpeg": "^0.0.4",
+    "fluent-ffmpeg": "^2.1.2",
     "less": "^3.9.0",
     "less-loader": "^5.0.0",
     "react": "^16.8.6",
